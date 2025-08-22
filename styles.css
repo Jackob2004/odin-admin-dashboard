@@ -1,0 +1,31 @@
+:root {
+    --blue: #1992d4;
+    --white: #ffffff;
+    --gray: #e2e8f0;
+}
+
+body {
+    display: grid;
+    grid-template: auto 1fr / 1fr 4fr;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main";
+
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: var(--white);
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: var(--blue);
+}
+
+.main {
+    grid-area: main;
+    background-color: var(--gray);
+}
+
