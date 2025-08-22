@@ -4,6 +4,7 @@
     --gray: #e2e8f0;
 
     --sidebar-width: max(230px, 15vw);
+    --header-gap: 20px;
 }
 
 body {
@@ -21,6 +22,7 @@ body {
 
     display: grid;
     grid-template: 1fr 1fr / 3fr 1fr;
+    gap: var(--header-gap);
 
     padding: 20px 40px;
     background-color: var(--white);
@@ -31,12 +33,23 @@ body {
 
     display: grid;
     grid-template-columns: repeat(3, max-content);
-    gap: 20px;
-    justify-items: end;
+    gap: var(--header-gap);
     align-items: center;
 }
 
 .header-user-info .user-name {
+    font-weight: bold;
+}
+
+.header-user-welcome {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: var(--header-gap);
+    align-items: center;
+
+}
+
+.header-user-welcome .greeting {
     font-weight: bold;
 }
 
@@ -45,8 +58,7 @@ body {
 
     display: grid;
     grid-template: 1fr / repeat(3, min-content);
-    gap: 20px;
-    justify-items: center;
+    gap: var(--header-gap);
     align-items: center;
 }
 
