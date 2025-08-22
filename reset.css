@@ -44,3 +44,8 @@ p {
 h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
 }
+
+/* remove "x" button when the field value is not null in Safari */
+input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button {
+    display: none;
+}

@@ -53,6 +53,25 @@ body {
     font-weight: bold;
 }
 
+.header-search label{
+    display: grid;
+    grid-template-columns: max-content max(200px, 50%);
+    gap: var(--header-gap);
+}
+
+.header-search input {
+    appearance: none;
+    border: none;
+    background-color: var(--gray);
+    border-radius: 25px;
+    padding: 5px 20px;
+}
+
+.header-search input:focus {
+    outline: 2px solid gray;
+    outline-offset: 10px;
+}
+
 .header-user-actions {
     justify-self: end;
 
