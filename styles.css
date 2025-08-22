@@ -26,10 +26,26 @@ body {
     background-color: var(--white);
 }
 
-.header-user-actions {
+.header-user-info {
+    justify-self: end;
+
     display: grid;
-    grid-template: 1fr / repeat(3, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(3, max-content);
+    gap: 20px;
+    justify-items: end;
+    align-items: center;
+}
+
+.header-user-info .user-name {
+    font-weight: bold;
+}
+
+.header-user-actions {
+    justify-self: end;
+
+    display: grid;
+    grid-template: 1fr / repeat(3, min-content);
+    gap: 20px;
     justify-items: center;
     align-items: center;
 }
