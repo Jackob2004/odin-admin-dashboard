@@ -112,9 +112,32 @@ body {
     font-weight: bold;
 }
 
+.sidebar-header,
+.sidebar li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.sidebar-header {
+    gap: 10px;
+}
+
+.sidebar li {
+    font-size: 1.2rem;
+}
+
+.sidebar img {
+    height: 1.2rem;
+}
+
+.sidebar-header img {
+    height: 2.2rem;
+}
+
 .sidebar ul {
     display: grid;
-    gap: 10px;
+    gap: 20px;
 
     list-style-type: none;
     padding: 0;
