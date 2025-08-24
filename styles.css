@@ -10,6 +10,10 @@
     --header-gap: 20px;
 
     --main-card-shadow: 4px 8px 8px #00000061;
+    --main-gap: 20px;
+    --main-card-padding: 20px;
+    --main-card-border-radius: 8px;
+    --main-section-title-space: 10px;
 }
 
 body {
@@ -27,7 +31,7 @@ body {
 
     display: grid;
     grid-template: 1fr 1fr / 3fr 1fr;
-    gap: var(--header-gap);
+    gap: 15px;
 
     padding: 20px 40px;
     background-color: var(--white);
@@ -130,7 +134,7 @@ body {
     grid-template-areas:
         "projects announcements"
         "projects trending";
-    gap: 20px;
+    gap: var(--main-gap);
 
     background-color: var(--gray);
     padding: 25px 25px 25px 15px;
@@ -140,23 +144,23 @@ body {
     grid-area: projects;
 }
 
-.projects-cards {
+.projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-auto-rows: 1fr;
-    gap: 20px;
+    gap: var(--main-gap);
 
-    padding-top: 10px;
+    margin-top: var(--main-section-title-space);
 }
 
-.projects-cards .card {
+.projects-container .card {
     display: grid;
     grid-template: 1fr min-content / 1fr;
-    gap: 20px;
+    gap: var(--main-gap);
 
-    padding: 20px;
+    padding: var(--main-card-padding);
     background-color: var(--white);
-    border-radius: 8px;
+    border-radius: var(--main-card-border-radius);
     border-left: 8px solid var(--orange);
     box-shadow: var(--main-card-shadow);
 }
@@ -185,30 +189,52 @@ body {
     grid-area: announcements;
 }
 
+.announcements-container {
+    display: grid;
+    gap: var(--main-gap);
+
+    margin-top: var(--main-section-title-space);
+    background-color: var(--white);
+    padding: var(--main-card-padding);
+    border-radius: var(--main-card-border-radius);
+    box-shadow: var(--main-card-shadow);
+}
+
+.announcements-container .announcement:not(:last-child) {
+    border-bottom: 2px solid var(--gray);
+    padding-bottom: 15px;
+}
+
+.announcements-container p {
+    color: var(--card-para-color);
+    font-size: 0.8rem;
+}
+
 .main-trending {
     grid-area: trending;
 }
 
-.trending-profiles {
+.trending-profiles-container {
     display: grid;
-    gap: 20px;
+    gap: var(--main-gap);
 
     background-color: var(--white);
-    border-radius: 8px;
-    padding: 20px;
-    margin-top: 10px;
+    border-radius: var(--main-card-border-radius);
+    padding: var(--main-card-padding);
+    margin-top: var(--main-section-title-space);
     box-shadow: var(--main-card-shadow);
 }
 
-.trending-profiles .profile {
+.trending-profiles-container .profile {
     display: grid;
     grid-template-columns: auto 1fr;
+    gap: var(--main-gap);
     align-items: center;
-    gap: 20px;
 }
 
 .profile p {
-    color: var(--card-para-color)
+    color: var(--card-para-color);
+    font-size: 0.9rem;
 }
 
 .profile .bold {
