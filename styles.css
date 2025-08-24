@@ -31,41 +31,17 @@ body {
 
     display: grid;
     grid-template: 1fr 1fr / 3fr 1fr;
-    gap: 15px;
+    gap: 5px;
 
     padding: 20px 40px;
     background-color: var(--white);
-}
-
-.header-user-info {
-    justify-self: end;
-
-    display: grid;
-    grid-template-columns: repeat(3, max-content);
-    gap: var(--header-gap);
-    align-items: center;
-}
-
-.header-user-info .user-name {
-    font-weight: bold;
-}
-
-.header-user-welcome {
-    display: grid;
-    grid-template-columns: repeat(2, max-content);
-    gap: var(--header-gap);
-    align-items: center;
-
-}
-
-.header-user-welcome .greeting {
-    font-weight: bold;
 }
 
 .header-search label{
     display: grid;
     grid-template-columns: max-content max(200px, 50%);
     gap: var(--header-gap);
+    align-items: center;
 }
 
 .header-search input {
@@ -79,6 +55,43 @@ body {
 .header-search input:focus {
     outline: 2px solid gray;
     outline-offset: 10px;
+}
+
+.header-user-info {
+    justify-self: end;
+
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    gap: var(--header-gap);
+    align-items: center;
+}
+
+.header-user-info img {
+    height: 1.7rem;
+}
+
+.header-user-info .user-name {
+    font-weight: bold;
+}
+
+.header-user-welcome {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: var(--header-gap);
+    align-items: center;
+}
+
+.greeting {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.greeting .full-user-name {
+    font-size: 1.3rem;
+}
+
+.header-user-welcome img {
+    height: 55px;
 }
 
 .header-user-actions {
@@ -196,6 +209,8 @@ body {
     justify-self: end;
 }
 
+.header-user-info button,
+.header-search button,
 .card-buttons button {
     height: 25px;
     vertical-align: middle;
@@ -204,6 +219,8 @@ body {
     cursor: pointer;
 }
 
+.header-search img,
+.header-user-info button img,
 .card-buttons img {
     height: 100%;
 }
