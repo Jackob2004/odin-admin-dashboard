@@ -4,6 +4,8 @@
     --gray: #e2e8f0;
     --orange: #efb52f;
 
+    --card-para-color: #555555;
+
     --sidebar-width: max(230px, 15vw);
     --header-gap: 20px;
 
@@ -131,7 +133,7 @@ body {
     gap: 20px;
 
     background-color: var(--gray);
-    padding: 20px 20px 0 15px;
+    padding: 25px 25px 25px 15px;
 }
 
 .main-projects {
@@ -160,7 +162,7 @@ body {
 }
 
 .card p {
-    color: #555555;
+    color: var(--card-para-color);
 }
 
 .card .card-buttons {
@@ -185,4 +187,35 @@ body {
 
 .main-trending {
     grid-area: trending;
+}
+
+.trending-profiles {
+    display: grid;
+    gap: 20px;
+
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 10px;
+    box-shadow: var(--main-card-shadow);
+}
+
+.trending-profiles .profile {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile p {
+    color: var(--card-para-color)
+}
+
+.profile .bold {
+    color: black;
+    font-weight: bold;
+}
+
+.main-trending img {
+    height: 45px;
 }
