@@ -2,9 +2,12 @@
     --blue: #1992d4;
     --white: #ffffff;
     --gray: #e2e8f0;
+    --orange: #efb52f;
 
     --sidebar-width: max(230px, 15vw);
     --header-gap: 20px;
+
+    --main-card-shadow: 4px 8px 8px #00000061;
 }
 
 body {
@@ -138,14 +141,42 @@ body {
 .projects-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 1fr;
     gap: 20px;
 
     padding-top: 10px;
 }
 
-.projects-cards .card{
-    height: 200px;
+.projects-cards .card {
+    display: grid;
+    grid-template: 1fr min-content / 1fr;
+    gap: 20px;
+
+    padding: 20px;
     background-color: var(--white);
+    border-radius: 8px;
+    border-left: 8px solid var(--orange);
+    box-shadow: var(--main-card-shadow);
+}
+
+.card p {
+    color: #555555;
+}
+
+.card .card-buttons {
+    justify-self: end;
+}
+
+.card-buttons button {
+    height: 25px;
+    vertical-align: middle;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.card-buttons img {
+    height: 100%;
 }
 
 .main-announcements {
